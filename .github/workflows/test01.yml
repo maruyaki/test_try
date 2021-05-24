@@ -26,6 +26,8 @@ jobs:
           curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
       - name: Add path for poetry
         run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+      - name: Init Poetry
+        run: poetry init
       - name: Install Dependencies
         run: poetry install --no-interaction
       - name: Run tests
@@ -37,4 +39,3 @@ jobs:
           file: ./coverage.xml
           name: codecov-umbrella
           fail_ci_if_error: true
-          
