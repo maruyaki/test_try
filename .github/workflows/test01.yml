@@ -27,7 +27,7 @@ jobs:
       - name: Add path for poetry
         run: echo "$HOME/.poetry/bin" >> $GITHUB_PATH
       - name: Init Poetry
-        run: poetry init
+        run: poetry init --no-interaction
       - name: Install Dependencies
         run: poetry install --no-interaction
       - name: Run tests
