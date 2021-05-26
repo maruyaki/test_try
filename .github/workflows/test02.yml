@@ -10,7 +10,7 @@ on:
 jobs:
   pytest:
     name: Run tests with pytest
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       matrix:
         python-version: [3.7, 3.8]
